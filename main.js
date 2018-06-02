@@ -9,7 +9,7 @@ function createWindow() {
         width:1200,
         height:800,
         icon:__dirname+'/img/dent.png',
-        backgroundColor: '#420024'
+        backgroundColor: '#112211'
     });
 
     win.loadURL(`file:${__dirname}/dist/dent/index.html`)
