@@ -12,9 +12,13 @@ function createWindow() {
         backgroundColor: '#112211'
     });
 
-    win.loadURL(`file:${__dirname}/dist/dent/index.html`)
+    // win.loadURL(`file:${__dirname}/dist/dent/index.html`)
 
-    win.webContents.openDevTools(); 
+    win.loadURL(url.format({
+        pathname: path.join(__dirname, 'dist/dent/index.html'),
+        slashes: true
+    }));
+    // win.webContents.openDevTools(); 
 
     win.on('clossed', () => {
         win = null;

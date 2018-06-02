@@ -11,6 +11,7 @@ import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { EmployeeService } from './components/employees/shares/employee.service';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { EmployeeService } from './components/employees/shares/employee.service'
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
+    ToastrModule.forRoot()
 
   ],
   providers: [EmployeeService],
